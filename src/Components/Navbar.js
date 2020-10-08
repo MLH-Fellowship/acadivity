@@ -30,11 +30,13 @@ const Navbar = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Acadivity
+            <a href="/" className="app-name">
+              Acadivity
+            </a>
           </Typography>
-          <Button color="inherit">Home</Button>
-          <Button color="inherit">Signup</Button>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" className="nav-options" href="/">Home</Button>
+          <Button color="inherit" className="nav-options" href="/signup">Register</Button>
+          <Button color="inherit" className="nav-options" href="/signin">Login</Button>
         </Toolbar>
       </AppBar>
     </div>
