@@ -18,31 +18,6 @@ router.use(passport.initialize());
 router.use(passport.session());
 const User = require("../model/user");
 
-
-router.get('/login', (req, res) => {
-    res.send('login page');
-})
-
-
-router.post("/login", (req, res, next) => {
-    passport.authenticate('local', function (err, user, info) {
-        if (err) {
-            return res.status(500).send();
-        }
-        if (!user) {
-            return res.status(400).json({
-                error: info
-            });
-        }
-        req.logIn(user, function (err) {
-            if (err) {
-                return next(err);
-            }
-            return res.status(200).json(user);
-        });
-    })(req, res, next);
-})
-
 router.get("/register", (req, res) => {
 
     res.send("register page");
@@ -58,7 +33,37 @@ router.post("/register", async (req, res) => {
         const newUser = new User({
             name: uname,
             email: umail,
-            password: hashedPassword
+            password: hashedPassword,
+            projects: [{
+                project_name: '',
+                tag: '',
+                description: '',
+                milestones: [{
+                    id: '',
+                    title: '',
+                    status: ''
+                }],
+                session: [{
+                    start_time: '',
+                    stop_time: '',
+                    duration: '',
+                    milestones_covered: '',
+
+                }]
+
+            }],
+            attendance: [{
+                subject_name: '',
+                total_classes: '',
+                current_attendance: '',
+                min_threshold: '',
+            }],
+            grade: [{
+                current_cgpa: '',
+                target_cgpa: '',
+                current_semester: '',
+                total_credits: '',
+            }]
         });
         newUser.save();
         res.send("registered");
