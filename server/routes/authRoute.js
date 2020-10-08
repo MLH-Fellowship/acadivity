@@ -5,12 +5,10 @@ const router = require("express").Router();
 const passport = require("passport");
 const bcrypt = require("bcrypt");
 const express = require("express");
-const flash = require('express-flash');
 const session = require('express-session');
-
+require('../config-folder/passport-config')(passport);
 router.use(express.json());
 
-router.use(flash());
 router.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
@@ -18,39 +16,32 @@ router.use(session({
 }));
 router.use(passport.initialize());
 router.use(passport.session());
+const User = require("../model/user");
 
-users = [];
-
-const initializePassport = require("../config-folder/passport-config");
-initializePassport(
-    passport,
-    email => users.find(user => user.email === email),
-    id => users.find(user => user.id === id)
-);
-
-
-
-router.get('/login/success', (req, res) => {
-    console.log("reached login/success");
-    res.send('logged in successfully');
-})
-
-router.get('/login/failure', (req, res) => {
-
-    res.send('login failed');
-})
 
 router.get('/login', (req, res) => {
-
     res.send('login page');
 })
 
 
-router.post("/login", passport.authenticate('local', {
-    successRedirect: '/login/success',
-    failureRedirect: '/login/failure',
-    failureFlash: true
-}));
+router.post("/login", (req, res, next) => {
+    passport.authenticate('local', function (err, user, info) {
+        if (err) {
+            return res.status(500).send();
+        }
+        if (!user) {
+            return res.status(400).json({
+                error: info
+            });
+        }
+        req.logIn(user, function (err) {
+            if (err) {
+                return next(err);
+            }
+            return res.status(200).json(user);
+        });
+    })(req, res, next);
+})
 
 router.get("/register", (req, res) => {
 
@@ -58,22 +49,22 @@ router.get("/register", (req, res) => {
 });
 
 
-
 router.post("/register", async (req, res) => {
 
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
-        users.push({
-            id: Date.now.toString(),
-            name: req.body.name,
-            email: req.body.email,
-            password: hashedPassword,
+        const uname = req.body.name;
+        const umail = req.body.email;
+        const newUser = new User({
+            name: uname,
+            email: umail,
+            password: hashedPassword
         });
-        res.send(users);
+        newUser.save();
+        res.send("registered");
     } catch {
         res.send("error");
     }
-    console.log(users);
 });
 
 
