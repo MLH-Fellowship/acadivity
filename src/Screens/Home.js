@@ -1,9 +1,10 @@
 import React from 'react';
+import AddProject from '../Components/AddProject';
 
-const Home = () => {
+export default function Home() {
     return(
-        <h1>Its Home!</h1>
+        <div>
+            <AddProject />
+        </div>
     );
 };
-
-export default Home;

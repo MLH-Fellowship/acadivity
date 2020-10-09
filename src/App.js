@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Home from './Components/Home';
+import Home from './Screens/Home';
 import Navbar from './Components/Navbar';
 import Signup from './Screens/Signup';
 import Signin from './Screens/Signin';
+import ProjectList from './Screens/ProjectList';
+import Timer from './Screens/Timer';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/signin" component={Signin} />
+          <Route exact path="/projectlist" component={ProjectList} />
+          <Route exact path="/timer" component={Timer} />
         </Switch>
       </BrowserRouter>
     </div>
