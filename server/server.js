@@ -51,7 +51,14 @@ const getProject = require('./routes/getProject')
 app.use('/projects', getProject)
 
 
+//add a project
+const addProject  = require('./routes/addProject')
+app.use('/addProject',addProject)
 
+
+//add a session
+const addSession = require('./routes/addSession')
+app.use('/addSession', addSession)
 
 
 const port = process.config.PORT || 5000;
