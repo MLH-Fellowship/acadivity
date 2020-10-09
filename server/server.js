@@ -13,6 +13,9 @@ app.use(
     })
 );
 
+
+
+
 const mongodburl = config.MONGODB_URL;
 mongoose
     .connect(mongodburl, {
@@ -25,14 +28,31 @@ mongoose
         console.log(`Error Thrown in Mongoose Connection(server.js): ${err}`);
     });
 
+
+
+
 app.get("/", (req, res) => {
     res.send(`hello world this is the homepage.`);
 });
 
+
+
+
 const authRouteRegister = require("./routes/authRouteRegister");
 app.use("/api", authRouteRegister);
 const authRouteLogin = require("./routes/authRouteLogin");
+const User = require("./model/user");
 app.use("/api", authRouteLogin);
+
+
+
+//get all the projects of a user
+const getProject = require('./routes/getProject')
+app.use('/projects', getProject)
+
+
+
+
 
 const port = process.config.PORT || 5000;
 app.listen(port, () => {
