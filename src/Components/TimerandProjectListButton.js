@@ -9,7 +9,7 @@ const images = [
     // url: '/static/images/grid-list/breakfast.jpg',
     title: 'To the present PlayGround!',
     width: '40%',
-    link: '/timer'
+    link: 'timer'
   },
   {
     // url: '/static/images/grid-list/burgers.jpg',
@@ -124,7 +124,7 @@ export default function ButtonBases() {
               <Link href={image.link} color="inherit">
                 {image.title}
               </Link>
-              <span className={classes.imageMarked} />
+              {/* <span className={classes.imageMarked} /> */}
             </Typography>
           </div>
         </ButtonBase>
