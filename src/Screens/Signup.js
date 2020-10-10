@@ -14,8 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Redirect } from 'react-router-dom';
 // import Alert from '../Components/Alert';
-import Cookies from 'js-cookie';
-import GoogleLogin from 'react-google-login';
+// import Cookies from 'js-cookie';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -47,69 +46,31 @@ export default function SignUp () {
 	const [ signupsuccess, setSignupsuccess ] = React.useState(false);
 	const [ loginsuccess, setLoginsuccess ] = React.useState(false);
 	const [ errMsg, setErrMsg ] = useState('');
-	const responseSuccessGoogle = (response) => {
-		console.log(response);
-		console.log(response.tokenId);
-		axios({
-			method: 'POST',
-            // url: 'https://serieux-saucisson-31787.herokuapp.com/api/user/googlelogin',
-            url: '',
-
-			data: { tokenId: response.tokenId }
-		}).then((response) => {
-			console.log(response);
-			if (response.data.success) {
-				setLoginsuccess(true);
-				Cookies.set('session-id', response.data['token']);
-				window.location.reload(false);
-			}
-			// alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
-		});
-	};
-
-	const responseErrorGoogle = (response) => {
-		console.log(response);
-	};
 
 	const submitHandler = (e) => {
 		e.preventDefault();
+		console.log('Inside submit handler!');
+		console.log(first_name + ' ' + last_name);
+		console.log(email);
+		console.log(password);
 		if (password === confirmPassword) {
             axios
-                .post('', {
-				// .post('https://serieux-saucisson-31787.herokuapp.com/api/user/signupUser', {
-					email: email.toLowerCase(),
-					password: password,
-					firstname: first_name,
-					lastname: last_name
+                .post('http://localhost:5000/api/register', {
+					name: first_name + ' ' + last_name,
+					email: email,
+					password: confirmPassword
 				})
 				.then(
 					(response) => {
-						if (response.data.success === true) {
+						if (response.data == "registered") {
 							setSignupsuccess(true);
 						}
-					},
-					(error) => {
-						if (error.response.data.err === 'Email Already Registered and Verified') {
-							setErrMsg('Email Already Registered and Verified');
-						} else setErrMsg('Something went wrong');
 					}
 				);
 		} else {
 			setErrMsg('Password Mismatch');
 		}
 	};
-	if (signupsuccess === true) {
-		return (
-			<Redirect
-				to={{
-					pathname: '/verifyotp',
-					state: { email: email }
-				}}
-			/>
-		);
-	} else if (loginsuccess) {
-		return <Redirect to='/' />;
-	} else {
 		return (
 			<div>
 				<div>
@@ -123,21 +84,7 @@ export default function SignUp () {
 							<Typography component='h1' variant='h5' style={{ marginBottom: '25px' }}>
 								Sign Up
 							</Typography>
-							<div className='center'>
-								<GoogleLogin
-									className='black-text'
-									buttonText='Sign up with Google'
-									clientId='798827553844-i0rjoguupm9jucbohldlp16kthi5boif.apps.googleusercontent.com'
-									onSuccess={responseSuccessGoogle}
-									onFailure={responseErrorGoogle}
-									cookiePolicy={'single_host_origin'}
-									redirectUri={'/'}
-								/>
-							</div>
-							<h6 className='signin-divider'>
-								<span>or</span>
-							</h6>
-							<form className={classes.form} onSubmit={submitHandler}>
+							<form className={classes.form} onSubmit={submitHandler} noValidate={true}>
 								<Grid container spacing={2}>
 									<Grid item xs={12} sm={6}>
 										<TextField
@@ -205,12 +152,6 @@ export default function SignUp () {
 											onChange={(e) => setConfirmPassword(e.target.value)}
 										/>
 									</Grid>
-									<Grid item xs={12}>
-										<FormControlLabel
-											control={<Checkbox value='allowExtraEmails' color='primary' />}
-											label='I want to receive inspiration, marketing promotions and updates via email.'
-										/>
-									</Grid>
 								</Grid>
 								<Button
 									type='submit'
@@ -238,4 +179,3 @@ export default function SignUp () {
 			</div>
 		);
 	}
-}
