@@ -1,4 +1,7 @@
 # Acadivity
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg)](https://forthebadge.com)
@@ -29,3 +32,23 @@ Is college just about academics? <br> Or is it about co-curricular activities on
    - Provide a target CGPA in X semesters.
    - Get a detailed report on the minimum requirement per semester to reach the target.
    - Update CGPA after each semester to get a revised plan of action.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://bugzilla.mozilla.org/user_profile?user_id=650533"><img src="https://avatars0.githubusercontent.com/u/42615579?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ajitesh Panda</b></sub></a><br /><a href="https://github.com/Ajitesh13/acadivity/commits?author=Ajitesh13" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
