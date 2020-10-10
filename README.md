@@ -1,6 +1,6 @@
 # Acadivity
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
@@ -44,6 +44,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://bugzilla.mozilla.org/user_profile?user_id=650533"><img src="https://avatars0.githubusercontent.com/u/42615579?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ajitesh Panda</b></sub></a><br /><a href="https://github.com/Ajitesh13/acadivity/commits?author=Ajitesh13" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/routrohan"><img src="https://avatars1.githubusercontent.com/u/32121879?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rohan Rout</b></sub></a><br /><a href="https://github.com/Ajitesh13/acadivity/commits?author=routrohan" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/shambhavi-aggarwal-437804179/"><img src="https://avatars0.githubusercontent.com/u/48705124?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shambhavi Aggarwal</b></sub></a><br /><a href="https://github.com/Ajitesh13/acadivity/commits?author=agg-shambhavi" title="Code">💻</a></td>
   </tr>
 </table>
 
