@@ -14,11 +14,12 @@ body {
     width: 90%;
     height: 500px;
     margin: 30px auto;
+    /* margin-left: 100rem; to move the component from left  */
   }
   
   .clock-holder {
     width: 100%;
-    background: #fff;
+    background: white;
     margin: 30px auto;
     position: relative;
   }
