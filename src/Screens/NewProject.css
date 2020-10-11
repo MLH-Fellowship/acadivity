@@ -1,0 +1,23 @@
+.form-label{
+    color: #858796;
+}
+
+.btn-primary{
+    background-color: #4e73df;
+}
+
+.btn-info{
+    background-color: #36b9cc;
+}
+
+.btn-info:hover{
+    background-color: #2993A3;
+}
+
+.btn-danger{
+    background-color: #e74a3b;
+}
+
+.btn-info:danger{
+    background-color: #B62416;
+}

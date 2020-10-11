@@ -1,0 +1,10 @@
+.page_heading{
+    text-align: center;
+
+    font-size: 40px;
+    padding: 5px;
+    color: #868898;
+}
+.card{
+    border: none;
+}
