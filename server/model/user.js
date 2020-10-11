@@ -79,7 +79,7 @@ const UserSchema = new mongoose.Schema({
             default: '',
         },
     }],
-    grade: [{
+    grade: {
         current_cgpa: {
             type: String,
             default: '',
@@ -96,7 +96,7 @@ const UserSchema = new mongoose.Schema({
             type: String,
             default: '',
         },
-    }]
+    }
 });
 
 const User = mongoose.model('User', UserSchema);
