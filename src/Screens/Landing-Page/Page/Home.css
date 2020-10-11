@@ -1,0 +1,19 @@
+.feature-heading{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 10px;
+}
+
+.cards{
+    padding: 10px;
+}
+
+.card{
+    border: none;
+}
+
+.footer{
+    background-color: #E4E7F1;
+    text-align: center;
+}
