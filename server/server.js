@@ -61,6 +61,15 @@ const addSession = require('./routes/addSession')
 app.use('/addSession', addSession)
 
 
+//attendance related operations
+const attendanceManager = require('./routes/attendaceManager')
+app.use('/attendance', attendanceManager)
+
+//grade related operations
+const gradeManager = require('./routes/gradeManager')
+app.use('/grade', gradeManager)
+
+
 const port = process.config.PORT || 5000;
 app.listen(port, () => {
     console.log(`Server running successfully at http://localhost:${port}`);
