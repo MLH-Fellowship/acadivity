@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-// import './Navbar-Landing.css';
+import './Navbar-Landing.css';
 
 function NavbarLanding() {
     const [click, setClick] = useState(false);
@@ -23,24 +23,24 @@ function NavbarLanding() {
     window.addEventListener('resize', showButton);
     return (
         <>
-            <nav className="navbar">
-                <div className="navbar-container" >
-                    <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            <nav className="navbarL">
+                <div className="navbarL-container" >
+                    <Link to="/" className="navbarL-logo" onClick={closeMobileMenu}>
                         Acadivity 
                     </Link>
-                    <div className='menu-icon' onClick={handleClick}>
+                    <div className='menuL-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
                     </div>
-                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                        <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                    <ul className={click ? 'navL-menu active' : 'navL-menu'}>
+                        <li className='navL-item'>
+                            <Link to='/' className='navL-links' onClick={closeMobileMenu}>
                             Home
                             </Link>
                         </li>
-                        <li className='nav-item'>
+                        <li className='navL-item'>
                             <Link
                             to='/'
-                            className='nav-links'
+                            className='navL-links'
                             onClick={closeMobileMenu}
                             >
                                 Features
@@ -49,7 +49,7 @@ function NavbarLanding() {
                         <li>
                             <Link
                             to='/sign-up'
-                            className='nav-links'
+                            className='navL-links'
                             onClick={closeMobileMenu}
                             >
                                 Sign Up
@@ -58,7 +58,7 @@ function NavbarLanding() {
                         <li>
                             <Link
                             to='/login'
-                            className='nav-links'
+                            className='navL-links'
                             onClick={closeMobileMenu}
                             >
                                 Login
