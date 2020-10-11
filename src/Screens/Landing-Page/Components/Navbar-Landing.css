@@ -1,5 +1,5 @@
-.navbar {
-    background: linear-gradient(90deg, rgb(228,231,241) 0% 100%);
+.navbarL {
+    background: #E4E6F2;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -10,7 +10,7 @@
     z-index: 999;
   }
   
-  .navbar-container {
+  .navbarL-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@
     max-width: 1500px;
   }
   
-  .navbar-logo {
+  .navbarL-logo {
     color: #5A5C81;
     justify-self: start;
     margin-left: 20px;
@@ -31,7 +31,7 @@
   }
   
   
-  .nav-menu {
+  .navL-menu {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
@@ -44,12 +44,12 @@
     
   }
   
-  .nav-item {
+  .navL-item {
     height: 80px;
     
   }
   
-  .nav-links {
+  .navL-links {
     color: #5A5C81;
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@
     height: 100%;
   }
   
-  .nav-links:hover {
+  .navL-links:hover {
     border-bottom: 4px solid #E4E7F1;
     transition: all 0.2s ease-out;
   }
@@ -69,17 +69,17 @@
   
   
   
-  .menu-icon {
+  .menuL-icon {
     display: none;
     
   }
   
   @media screen and (max-width: 960px) {
-    .NavbarItems {
+    .navL-item {
       position: relative;
     }
   
-    .nav-menu {
+    .navL-menu {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -91,7 +91,7 @@
       transition: all 0.5s ease;
     }
   
-    .nav-menu.active {
+    .navL-menu.active {
       background: #E5E8F2;
       left: 0;
       opacity: 1;
@@ -99,27 +99,27 @@
       z-index: 1;
     }
   
-    .nav-links {
+    .navL-links {
       text-align: center;
       padding: 2rem;
       width: 100%;
       display: table;
     }
   
-    .nav-links:hover {
+    .navL-links:hover {
       background-color: #4E73DF;
       color: #fff;
       border-radius: 0;
     }
   
-    .navbar-logo {
+    .navbarL-logo {
       position: absolute;
       top: 0;
       left: 0;
       transform: translate(25%, 50%);
     }
   
-    .menu-icon {
+    .menuL-icon {
       display: block;
       position: absolute;
       top: 0;
