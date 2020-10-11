@@ -1,7 +1,7 @@
 ## Related to frontend or backend ? 
-- [] frontend
-- [] backend
-- [] both
+- [ ] frontend
+- [ ] backend
+- [ ] both
 
 ## Summary
 <!-- Give the summary of the problem you faced -->
@@ -10,15 +10,15 @@
 <!-- Paste the error logs here -->
 
 ## Browser in which you are facing this issue ?
-- [] Chrome 
-- [] Firefox 
-- [] Edge 
-- [] Internet Explorer 
+- [ ] Chrome 
+- [ ] Firefox 
+- [ ] Edge 
+- [ ] Internet Explorer 
 
 ## Issue Type 
 <!-- Specify the type of issue -->
-- [] Bug 
-- [] Enhancement
-- [] Feature Request 
+- [ ] Bug 
+- [ ] Enhancement
+- [ ] Feature Request 
 
 <!-- Please make sure you have added relevent labels while opening the issues -->
