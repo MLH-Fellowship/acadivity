@@ -8,10 +8,10 @@ Fixes #Issue_Number
 <!--Please Add Summary of the changes that you have made.-->
 
 ## Mark the browser where you test this issue-fix ?
-- [] Chrome 
-- [] Firefox 
-- [] Edge 
-- [] Internet Explorer 
+- [ ] Chrome 
+- [ ] Firefox 
+- [ ] Edge 
+- [ ] Internet Explorer 
 
 ## Reviewers
 <!--Ping specific reviewers-->
