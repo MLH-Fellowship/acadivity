@@ -55,7 +55,7 @@ export default function SignUp () {
 		console.log(password);
 		if (password === confirmPassword) {
             axios
-                .post('http://localhost:5000/api/register', {
+                .post('https://acadivity.herokuapp.com/api/register', {
 					name: first_name + ' ' + last_name,
 					email: email,
 					password: confirmPassword
