@@ -39,7 +39,7 @@ function NavbarLanding() {
                         </li>
                         <li className='navL-item'>
                             <Link
-                            to='/'
+                            to='/newProject'
                             className='navL-links'
                             onClick={closeMobileMenu}
                             >

@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Redirect } from 'react-router-dom';
+import Navbar from '../Components/Navbar/Navbar';
 // import Alert from '../Components/Alert';
 // import Cookies from 'js-cookie';
 
@@ -73,6 +74,7 @@ export default function SignUp () {
 	};
 		return (
 			<div>
+				<Navbar/>
 				<div>
 					{/* <Alert msg={errMsg} type='danger' /> */}
 					<Container component='main' maxWidth='xs'>
