@@ -51,7 +51,7 @@ function ViewProject() {
                     <ListGroup.Item>{listitem}</ListGroup.Item>))
                 }
                 </ListGroup>
-                <Button variant="primary">Start a session</Button>
+                <Link to='/timer'><Button variant="primary">Start a session</Button></Link>
             </Card.Body>
             </Card>
         )
