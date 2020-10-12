@@ -14,55 +14,28 @@ function ViewProject() {
 
     const ProjectDetails = [
         {
-            project_name:"Project 1",
+            project_name:"Project title 1",
             description: "something here",
-            milestone: [
-                {
-                    title: "task 1"
-                },
-                {
-                    title: "task 2"
-                },
-                {
-                    title: "task 3"
-                }
-            ]
+            milestone: ["task 1", "task 2","task 3"]
         },
         {
-            project_name:"Project 2",
+            project_name:"Project title 2",
             description: "something here",
-            milestone: [
-                {
-                    title: "task 1"
-                },
-                {
-                    title: "task 2"
-                },
-                {
-                    title: "task 3"
-                }
-            ]
+            milestone: ["task 1", "task 2","task 3"]
         },
         {
-            project_name:"Project 3",
+            project_name:"Project title 3",
             description: "something here",
-            milestone: [
-                {
-                    title: "task 1"
-                },
-                {
-                    title: "task 2"
-                },
-                {
-                    title: "task 3"
-                }
-            ]
+            milestone: ["task 1", "task 2","task 3","task 4", "task 5","task 6"]
         }
 
     ]
 
 
     const renderCard = (card,index) => {
+
+        const milestone_array = [...card.milestone]
+
         return(
             <Card style={{ width: '18rem' }} key={index}>
             <Card.Body>
@@ -73,6 +46,11 @@ function ViewProject() {
                 <Card.Subtitle>
                     Milestones
                 </Card.Subtitle>
+                <ListGroup variant="flush">
+                {milestone_array.map(listitem => (
+                    <ListGroup.Item>{listitem}</ListGroup.Item>))
+                }
+                </ListGroup>
                 <Button variant="primary">Start a session</Button>
             </Card.Body>
             </Card>
