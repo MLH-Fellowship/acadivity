@@ -22,14 +22,6 @@ export default function Timer() {
     return(
         <div>
             <StopWatch />
-            <Button
-                variant="contained"
-                color="primary"
-                className={classes.button}
-                startIcon={<CloudUploadIcon />}
-            >
-                Submit Time
-            </Button>
         </div>
     );
 };
