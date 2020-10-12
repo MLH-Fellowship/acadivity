@@ -48,7 +48,7 @@ function NavbarLanding() {
                         </li>
                         <li>
                             <Link
-                            to='/sign-up'
+                            to='/signup'
                             className='navL-links'
                             onClick={closeMobileMenu}
                             >
@@ -57,7 +57,7 @@ function NavbarLanding() {
                         </li>
                         <li>
                             <Link
-                            to='/login'
+                            to='/signin'
                             className='navL-links'
                             onClick={closeMobileMenu}
                             >
