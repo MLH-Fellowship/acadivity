@@ -6,11 +6,11 @@ import Navbar from './Components/Navbar/Navbar';
 import Signup from './Screens/Signup';
 import Signin from './Screens/Signin';
 import ProjectList from './Screens/ProjectList';
-import Timer from './Screens/Timer';
 import Statistics from './Screens/Statistics';
 import ViewProject from './Screens/ViewProjects';
 import NewProject from './Screens/NewProject';
 import LandingPage from './Screens/Landing-Page/Page/Home'
+import Timerpage from './Screens/Timer-page';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/signin" component={Signin} />
           {/* <Route exact path="/projectlist" component={ProjectList} /> */}
-          <Route exact path="/timer" component={Timer} />
+          <Route exact path="/timer" component={Timerpage} />
         </Switch>
         <Switch>
           <Route path='/statistics' exact component={Statistics}/>
