@@ -1,9 +1,11 @@
 .form-label{
     color: #858796;
+    background-color: white;
 }
 
 .btn-primary{
     background-color: #4e73df;
+    margin: 4px;
 }
 
 .btn-info{
@@ -21,3 +23,4 @@
 .btn-info:danger{
     background-color: #B62416;
 }
+
