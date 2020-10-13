@@ -3,6 +3,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import '../Styles/ProgressBar.css';
+import img from './progressimg.jpg'
 
 
 const percentage = 66;
@@ -15,7 +16,7 @@ const ProgressBar = () => {
                     <strong> 1. Acadivity </strong>
                 </div>
                 {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
-                <img style={{ width: 200, marginTop: -5 }} src="https://i.imgur.com/b9NyUGm.png" alt="doge" />
+                <img style={{ width: 200, marginTop: -5 }} src={img} />
                 <div style={{ fontSize: 30, marginTop: -5 }}>
                     <strong> 20% </strong>
                 </div>
@@ -26,7 +27,7 @@ const ProgressBar = () => {
                     <strong> 2. Practice DSA </strong>
                 </div>
                 {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
-                <img style={{ width: 200, marginTop: -5 }} src="https://i.imgur.com/b9NyUGm.png" alt="doge" />
+                <img style={{ width: 200, marginTop: -5 }} src={img} />
                 <div style={{ fontSize: 30, marginTop: -5 }}>
                  <strong>66%</strong> 
                 </div>
@@ -37,7 +38,7 @@ const ProgressBar = () => {
                     <strong> 3. JAVA Assignment </strong>
                 </div>
                 {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
-                <img style={{ width: 200, marginTop: -5 }} src="https://i.imgur.com/b9NyUGm.png" alt="doge" />
+                <img style={{ width: 200, marginTop: -5 }} src={img} />
                 <div style={{ fontSize: 30, marginTop: -5 }}>
                     <strong>5%</strong> 
                 </div>
@@ -48,7 +49,7 @@ const ProgressBar = () => {
                     <strong> 4. Guitar Practice </strong>
                 </div>
                 {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
-                <img style={{ width: 200, marginTop: -5 }} src="https://i.imgur.com/b9NyUGm.png" alt="doge" />
+                <img style={{ width: 200, marginTop: -5 }} src={img} />
                 <div style={{ fontSize: 30, marginTop: -5 }}>
                     <strong>25%</strong> 
                 </div>
