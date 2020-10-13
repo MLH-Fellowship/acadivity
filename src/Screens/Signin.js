@@ -15,6 +15,7 @@ import { Redirect } from 'react-router-dom';
 import Cookies from 'js-cookie';
 // import Alert from '../Components/Alert';
 import GoogleLogin from 'react-google-login';
+import Navbar from '../Components/Navbar/Navbar';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -76,8 +77,14 @@ export default function SignIn () {
 				}
 			);
 	};
+	if (loginsuccess === true) {
+		return(
+			<Redirect to="/" />
+		);
+	} else {
 	return (
 		<div>
+			<Navbar/>
 			<div>
 				{/* <Alert msg={errMsg} type='danger' /> */}
 				<Container component='main' maxWidth='xs'>
@@ -129,6 +136,9 @@ export default function SignIn () {
 								color='primary'
 								className={classes.submit}
 							>
+							<Link href='/signup' variant='body2'>
+								
+							</Link>
 								Sign In
 							</Button>
 
@@ -149,4 +159,5 @@ export default function SignIn () {
 			{/* <Footer /> */}
 		</div>
 	);
+}
 }

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import DisplayComponent from '../Components/StopWatch Component/DisplayComponent';
 import BtnComponent from '../Components/StopWatch Component/BtnComponent';
-import Button from 'react-bootstrap/Button';
 
 
 function StopWatch() {
@@ -53,7 +52,6 @@ function StopWatch() {
               <div className="stopwatch">
                    <DisplayComponent time={time}/>
                    <BtnComponent status={status} resume={resume} reset={reset} stop={stop} start={start}/>
-                   <Button variant="primary" size='lg'>Submit</Button>
               </div>
             
             </div>

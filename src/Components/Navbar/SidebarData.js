@@ -4,11 +4,18 @@ import * as GoIcons from 'react-icons/go';
 
 export const SidebarData = [
     {
+        title: "Home",
+        path: '/',
+        icon: <GoIcons.GoGraph/>,
+        cname: 'nav-text'
+    },
+    {
         title: "Statistics",
         path: '/statistics',
         icon: <GoIcons.GoGraph/>,
         cname: 'nav-text'
     },
+
     {
         title: "View Projects",
         path: '/ViewProjects',
@@ -20,6 +27,12 @@ export const SidebarData = [
         path: '/newProject',
         icon: <AiIcons.AiFillFileAdd/>,
         cname: 'nav-text'
-    }
+    },
+    {
+        title: "Playgroud",
+        path: '/timer',
+        // icon: <GoIcons.GoGraph/>,
+        cname: 'nav-text'
+    },
 ]
 
