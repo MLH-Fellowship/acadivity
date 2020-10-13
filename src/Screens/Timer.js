@@ -3,13 +3,17 @@ import StopWatch from '../Components/StopWatch';
 import '../Styles/StopWatch.css';
 import SetMilestone from '../Components/SetMilestone';
 
+
+
 export default function Timer() {
-    return(
+    return(<>
         <div>
+        
             <StopWatch />
             <br/>
             <SetMilestone />
         </div>
+        </>
     );
 };
 

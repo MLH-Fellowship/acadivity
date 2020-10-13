@@ -6,6 +6,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card'
 import styled from 'styled-components';
+import { NavigationBar } from '../Components/Navbar/NavigationBar';
+import Sidebar from '../Components/Navbar/Sidebar';
 
 const TitleWrapper = styled.section`
   position: absolute;
@@ -47,7 +49,9 @@ const BodyWrapper = styled.section`
 `;
 
 function Timerpage() {
-    return (
+    return (<>
+        <NavigationBar />
+        <Sidebar />
         <div className='statistics'> 
             <TitleWrapper>
                 <Title style={{fontSize:"28px"}}>
@@ -65,6 +69,7 @@ function Timerpage() {
  
             </BodyWrapper>
         </div>
+        </>
     )
 }
 

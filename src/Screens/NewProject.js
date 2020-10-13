@@ -6,6 +6,9 @@ import './NewProject.css';
 import axios from 'axios'
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
+import { NavigationBar } from '../Components/Navbar/NavigationBar';
+import Sidebar from '../Components/Navbar/Sidebar';
+
 
 const TitleWrapper = styled.section`
   position: absolute;
@@ -93,7 +96,9 @@ function NewProject() {
     setInputFields(values);
     }
 
-    return (
+    return (<>
+    <NavigationBar />
+        <Sidebar />
         <div className='newProject'> 
             {/* <Navbar/> */}
             <TitleWrapper>
@@ -139,6 +144,7 @@ function NewProject() {
 
             </BodyWrapper>
         </div>
+        </>
     )
 }
 

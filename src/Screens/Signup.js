@@ -54,23 +54,23 @@ export default function SignUp () {
 		console.log(first_name + ' ' + last_name);
 		console.log(email);
 		console.log(password);
-		if (password === confirmPassword) {
-            axios
-                .post('https://acadivity.herokuapp.com/api/register', {
-					name: first_name + ' ' + last_name,
-					email: email,
-					password: confirmPassword
-				})
-				.then(
-					(response) => {
-						if (response.data == "registered") {
-							setSignupsuccess(true);
-						}
-					}
-				);
-		} else {
-			setErrMsg('Password Mismatch');
-		}
+		// if (password === confirmPassword) {
+        //     axios
+        //         .post('https://acadivity.herokuapp.com/api/register', {
+		// 			name: first_name + ' ' + last_name,
+		// 			email: email,
+		// 			password: confirmPassword
+		// 		})
+		// 		.then(
+		// 			(response) => {
+		// 				if (response.data == "registered") {
+		// 					setSignupsuccess(true);
+		// 				}
+		// 			}
+		// 		);
+		// } else {
+		// 	setErrMsg('Password Mismatch');
+		// }
 	};
 		return (
 			<div>
@@ -155,15 +155,15 @@ export default function SignUp () {
 										/>
 									</Grid>
 								</Grid>
-								<Button
-									type='submit'
+								<Link to='/signin'><Button
+									value='submit'
 									fullWidth
 									variant='contained'
 									color='primary'
 									className={classes.submit}
 								>
 									Sign Up
-								</Button>
+								</Button></Link>
 								<Grid container justify='flex-end'>
 									<Grid item>
 										<Link href='/signin' variant='body2'>

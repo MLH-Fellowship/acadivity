@@ -3,6 +3,9 @@ import './Statistics.css'
 import Piechart from '../Components/PieChart';
 import Progessbar from '../Components/ProgressBar';
 import styled from 'styled-components';
+import { NavigationBar } from '../Components/Navbar/NavigationBar';
+import Sidebar from '../Components/Navbar/Sidebar';
+
 
 const TitleWrapper = styled.section`
   position: absolute;
@@ -45,7 +48,9 @@ const BodyWrapper = styled.section`
 `;
 
 function Statistics() {
-    return (
+    return (<>
+    <NavigationBar />
+        <Sidebar />
         <div className='statistics'> 
             {/* <h1 className="statics-head">So, What's the Stat ?</h1>
             <Piechart />
@@ -60,6 +65,7 @@ function Statistics() {
             <Progessbar />
             </BodyWrapper>
         </div>
+        </>
     )
 }
 

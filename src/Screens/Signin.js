@@ -48,40 +48,40 @@ export default function SignIn () {
 
 	const submitHandler = (e) => {
 		e.preventDefault();
-		axios
-			.post('https://acadivity.herokuapp.com/api/login', {
-            	email: email.toLowerCase(),
-				password: password
-			})
-			.then(
-				(response) => {
-					console.log(response);
-					setLoginsuccess(true);
-					console.log(response.data['_id']);
-					Cookies.set('name', response.data['name']);
-					// if (response.data) {
-					// 	setLoginsuccess(true);
-					// 	Cookies.set('session-id', response.data['_id']);
-					// 	window.location.reload(false);
-					// 	console.log(response.data);
-					// }
-				},
-				(error) => {
-					console.log(error.response.data);
-					setErrMsg('Enter valid combination of email id and password!');
-					// if (error.response.data.err === 'User Not Found') {
-					// 	setErrMsg('User not found');
-					// } else if (error.response.data.err.message === 'Incorrect Password') {
-					// 	setErrMsg('Incorrect password');
-					// }
-				}
-			);
+		// axios
+		// 	.post('https://acadivity.herokuapp.com/api/login', {
+        //     	email: email.toLowerCase(),
+		// 		password: password
+		// 	})
+		// 	.then(
+		// 		(response) => {
+		// 			console.log(response);
+		// 			setLoginsuccess(true);
+		// 			console.log(response.data['_id']);
+		// 			Cookies.set('name', response.data['name']);
+		// 			// if (response.data) {
+		// 			// 	setLoginsuccess(true);
+		// 			// 	Cookies.set('session-id', response.data['_id']);
+		// 			// 	window.location.reload(false);
+		// 			// 	console.log(response.data);
+		// 			// }
+		// 		},
+		// 		(error) => {
+		// 			console.log(error.response.data);
+		// 			setErrMsg('Enter valid combination of email id and password!');
+		// 			// if (error.response.data.err === 'User Not Found') {
+		// 			// 	setErrMsg('User not found');
+		// 			// } else if (error.response.data.err.message === 'Incorrect Password') {
+		// 			// 	setErrMsg('Incorrect password');
+		// 			// }
+		// 		}
+		// 	);
 	};
-	if (loginsuccess === true) {
-		return(
-			<Redirect to="/" />
-		);
-	} else {
+	// if (loginsuccess === true) {
+	// 	return(
+	// 		<Redirect to="/" />
+	// 	);
+	// } else {
 	return (
 		<div>
 			{/* <Navbar/> */}
@@ -128,24 +128,21 @@ export default function SignIn () {
 									/>
 								</Grid>
 							</Grid>
-
+							<Link href='/ViewProjects' variant='body2'>
 							<Button
-								type='submit'
+								
 								fullWidth
 								variant='contained'
 								color='primary'
 								className={classes.submit}
 							>
-							<Link href='/signup' variant='body2'>
-								
-							</Link>
-								Sign In
-							</Button>
+							Sign In
+							</Button></Link>
 
 							<Grid container>
-								<Grid item xs>
-									<Link href='#' variant='body2' />
-								</Grid>
+								{/* <Grid item xs>
+									<Link href='/ViewProjects' variant='body2' />
+								</Grid> */}
 								<Grid item>
 									<Link href='/signup' variant='body2'>
 										{"Don't have an account? Sign Up"}
@@ -159,5 +156,4 @@ export default function SignIn () {
 			{/* <Footer /> */}
 		</div>
 	);
-}
 }

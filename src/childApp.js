@@ -6,11 +6,11 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Statistics from './Screens/Statistics';
 import ViewProject from './Screens/ViewProjects';
 import NewProject from './Screens/NewProject';
-import attendance from './Screens/attendance';
-import grade from './Screens/grade';
+import Grade from './Screens/Grade';
 
 export default function childApp(){
     return(
+      
         <React.Fragment>
       <Router>
         <NavigationBar />
@@ -20,10 +20,10 @@ export default function childApp(){
           <Route exact path="/ViewProjects" component={ViewProject} />
           <Route exact path="/newProject" component={NewProject} />
           <Route exact path="/timer" component={Timerpage} />
-          <Route exact path="/attendance" component={attendance} />
-          <Route exact path="/grade" component={grade} />
+          <Route exact path="/grade" component={Grade} />
         </Switch>
       </Router>
     </React.Fragment>
+    
     )
 }

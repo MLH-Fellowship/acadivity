@@ -10,6 +10,8 @@ import CardDeck from 'react-bootstrap/CardDeck';
 import {Link} from 'react-router-dom'
 import styled from 'styled-components';
 import CardGroup from 'react-bootstrap/CardGroup'
+import { NavigationBar } from '../Components/Navbar/NavigationBar';
+import Sidebar from '../Components/Navbar/Sidebar';
 
 const TitleWrapper = styled.section`
   position: absolute;
@@ -112,7 +114,9 @@ function ViewProject() {
 
     
 
-    return (
+    return (<>
+        <NavigationBar />
+        <Sidebar />
         <div className='viewProjects' > 
             <TitleWrapper >
                 <Title >
@@ -130,6 +134,7 @@ function ViewProject() {
 
             </BodyWrapper>
         </div>
+        </>
     )
 }
 
