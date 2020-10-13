@@ -15,7 +15,7 @@ import { Redirect } from 'react-router-dom';
 import Cookies from 'js-cookie';
 // import Alert from '../Components/Alert';
 import GoogleLogin from 'react-google-login';
-import Navbar from '../Components/Navbar/Navbar';
+// import Navbar from '../Components/Navbar/Navbar';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -84,7 +84,7 @@ export default function SignIn () {
 	} else {
 	return (
 		<div>
-			<Navbar/>
+			{/* <Navbar/> */}
 			<div>
 				{/* <Alert msg={errMsg} type='danger' /> */}
 				<Container component='main' maxWidth='xs'>

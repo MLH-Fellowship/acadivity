@@ -7,8 +7,49 @@ import './ViewProject.css';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import CardDeck from 'react-bootstrap/CardDeck';
-import Navbar from '../Components/Navbar/Navbar';
 import {Link} from 'react-router-dom'
+import styled from 'styled-components';
+import CardGroup from 'react-bootstrap/CardGroup'
+
+const TitleWrapper = styled.section`
+  position: absolute;
+    width: 965px;
+    height: 86px;
+    left: 435px;
+    top: 99px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`;
+
+const Title = styled.h1`
+    position: absolute;
+    width: 400px;
+    height: 42px;
+    left: 241px;
+    top: 121px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #9D9FA9;
+    background: #FFFFFF;
+`;
+
+const BodyWrapper = styled.section`
+    position: absolute;
+    width: 1500px;
+    height: 580px;
+    left: 100px;
+    top: 217px;
+    background: #FFFFFF;
+    box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.25);
+    padding: 4em;
+    margin-left: 43px;
+    
+`;
 
 function ViewProject() {
 
@@ -28,11 +69,11 @@ function ViewProject() {
             description: "Course Work",
             milestone: ["Complete Ex-1", "Complete Ex-1","Complete Ex-2","Complete Ex-3", "Complete Ex-4","Complete Ex-5"]
         },
-        {
-            project_name:"Guitar Practice",
-            description: "Wild Hobby!",
-            milestone: ["Complete 5 min form video 1", "Complete 5 min form video 2","Complete 5 min form video 3","Complete final Ex"]
-        }
+        // {
+        //     project_name:"Guitar Practice",
+        //     description: "Wild Hobby!",
+        //     milestone: ["Complete 5 min form video 1", "Complete 5 min form video 2","Complete 5 min form video 3","Complete final Ex"]
+        // }
 
     ]
 
@@ -43,7 +84,7 @@ function ViewProject() {
 
         return(
             <div className="main-content-viewproject">
-                <Card style={{ width: '30rem' }} key={index}>
+                <Card  key={index}>
                     <Card.Body>
                         <Card.Header>{card.project_name}</Card.Header>
                         <Card.Text>
@@ -68,25 +109,20 @@ function ViewProject() {
 
     return (
         <div className='viewProjects'> 
-            <Navbar/>
-            <Container>
-                <Row>
-                    <Col md={{ span: 6, offset: 3 }}>
-                        <div className='page_heading'>
-                            <Card body>
-                                Projects
-                            </Card>
-                        </div>
-                    </Col>
-                    <Col md={{ span: 30, offset: 1 }}>
-                    <CardDeck>
-                        {
-                            ProjectDetails.map(renderCard)
-                        }
-                    </CardDeck>
-                    </Col>
-                </Row>
-            </Container>
+            <TitleWrapper>
+                <Title>
+                    View projects
+                </Title>
+            </TitleWrapper>
+            <BodyWrapper>
+
+                        <CardGroup>
+                            {
+                                ProjectDetails.map(renderCard)
+                            }
+                            </CardGroup>
+
+            </BodyWrapper>
         </div>
     )
 }
