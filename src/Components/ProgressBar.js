@@ -17,7 +17,7 @@ const ProgressBar = () => {
                 {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
                 <img style={{ width: 200, marginTop: -5 }} src="https://i.imgur.com/b9NyUGm.png" alt="doge" />
                 <div style={{ fontSize: 30, marginTop: -5 }}>
-                    <strong> 20% </strong>Be fast yr! 
+                    <strong> 20% </strong>
                 </div>
             </CircularProgressbarWithChildren>
             <br/>
@@ -28,7 +28,7 @@ const ProgressBar = () => {
                 {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
                 <img style={{ width: 200, marginTop: -5 }} src="https://i.imgur.com/b9NyUGm.png" alt="doge" />
                 <div style={{ fontSize: 30, marginTop: -5 }}>
-                 <strong>66%</strong> Seriously! Only This much yet?
+                 <strong>66%</strong> 
                 </div>
             </CircularProgressbarWithChildren>
             <br/>
@@ -39,7 +39,7 @@ const ProgressBar = () => {
                 {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
                 <img style={{ width: 200, marginTop: -5 }} src="https://i.imgur.com/b9NyUGm.png" alt="doge" />
                 <div style={{ fontSize: 30, marginTop: -5 }}>
-                    <strong>5%</strong> WTF! Barely started? 
+                    <strong>5%</strong> 
                 </div>
             </CircularProgressbarWithChildren>
             <br/>
@@ -50,7 +50,7 @@ const ProgressBar = () => {
                 {/* Put any JSX content in here that you'd like. It'll be vertically and horizonally centered. */}
                 <img style={{ width: 200, marginTop: -5 }} src="https://i.imgur.com/b9NyUGm.png" alt="doge" />
                 <div style={{ fontSize: 30, marginTop: -5 }}>
-                    <strong>25%</strong> Tumse na hoga ?
+                    <strong>25%</strong> 
                 </div>
             </CircularProgressbarWithChildren>
         </div>
