@@ -7,9 +7,11 @@ import './ViewProject.css';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
 import CardDeck from 'react-bootstrap/CardDeck';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components';
-import CardGroup from 'react-bootstrap/CardGroup'
+import CardGroup from 'react-bootstrap/CardGroup';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 const TitleWrapper = styled.section`
   position: absolute;
@@ -53,26 +55,45 @@ const BodyWrapper = styled.section`
 
 function ViewProject() {
 
+    const [projectlist, setProjectlist] = React.useState('');
+
+    const loadProducts = async () => {
+        try {
+            const res = await fetch('http://localhost:5000/projects/5f86012389b2c90ed4823260');
+            const data = await res.json();
+            setProjectlist(data);
+
+        } catch (err) {
+            console.error(err);
+        }
+    };
+    console.log(projectlist);
+
+    useEffect(() => {
+        loadProducts();
+    }, []);
+
+
     const ProjectDetails = [
         {
-            project_name:"Acadivity",
+            project_name: "Acadivity",
             description: "A special MERN App!",
-            milestone: ["Complete the Frontend", "Complete the Backend","Complete the DevOps","",""]
+            milestone: ["Complete the Frontend", "Complete the Backend", "Complete the DevOps", "", ""]
         },
         {
-            project_name:"Practice DSA",
+            project_name: "Practice DSA",
             description: "Just a Hobby!",
-            milestone: ["HashMap", "Dynamic Programming","Graphs","",""]
+            milestone: ["HashMap", "Dynamic Programming", "Graphs", "", ""]
         },
         {
-            project_name:"JAVA Assignment",
+            project_name: "JAVA Assignment",
             description: "Course Work",
-            milestone: ["Complete Ex-1", "Complete Ex-1","Complete Ex-2","Complete Ex-3"]
+            milestone: ["Complete Ex-1", "Complete Ex-1", "Complete Ex-2", "Complete Ex-3"]
         },
         {
-            project_name:"JAVA Assignment",
+            project_name: "JAVA Assignment",
             description: "Course Work",
-            milestone: ["Complete Ex-1", "Complete Ex-1","Complete Ex-2","Complete Ex-3"]
+            milestone: ["Complete Ex-1", "Complete Ex-1", "Complete Ex-2", "Complete Ex-3"]
         },
         // {
         //     project_name:"Guitar Practice",
@@ -83,50 +104,63 @@ function ViewProject() {
     ]
 
 
-    const renderCard = (card,index) => {
+    const renderCard = (card, index) => {
 
-        const milestone_array = [...card.milestone]
+        const milestone_array = card.milestones;
 
-        return(
+        return (
             <div className="main-content-viewproject">
-                <Card  key={index} style={{width:"470px", height:"500px"}}>
+                <Card key={index} style={{ width: "470px", height: "500px" }}>
                     <Card.Body >
                         <Card.Header><h3>{card.project_name}</h3></Card.Header>
-                        <Card.Text style={{margin:"20px"}}>
-                        <h5>Description: {card.description} 🗒️</h5>
+                        <Card.Text style={{ margin: "20px" }}>
+                            <h5>Description: {card.description} 🗒️</h5>
                         </Card.Text>
-                        <Card.Subtitle style={{margin:"20px"}}>
-                            <h4>Milestones 🎯</h4>
+                        <Card.Subtitle style={{ margin: "20px" }}>
+                            <h4>Yet to achieve milestones: 🎯</h4>
                         </Card.Subtitle>
-                        <ListGroup variant="flush" style={{margin:"20px"}}>
-                        {milestone_array.map(listitem => (
-                            <ListGroup.Item>{listitem}</ListGroup.Item>))
-                        }
+                        <ListGroup variant="flush" style={{ margin: "20px" }}>
+                            {milestone_array.map(listitem => (
+                                listitem.status === "false" &&
+                                <ListGroup.Item>{listitem.title}</ListGroup.Item>))
+                            }
                         </ListGroup>
-                        <Link to='/timer'><Button variant="primary" style={{marginLeft:"20px"}}>Start a session</Button></Link>
+                        <Card.Subtitle style={{ margin: "20px" }}>
+                            <h4>Milestones Achieved: 🎯</h4>
+                        </Card.Subtitle>
+                        <ListGroup variant="flush" style={{ margin: "20px" }}>
+                            {milestone_array.map(listitem => (
+                                listitem.status === "true" &&
+                                <ListGroup.Item>{listitem.title}</ListGroup.Item>))
+                            }
+                        </ListGroup>
+                        <Link to='/timer'><Button variant="primary" style={{ marginLeft: "20px" }}>Start a session</Button></Link>
                     </Card.Body>
                 </Card>
             </div>
         )
     }
 
-    
+
 
     return (
-        <div className='viewProjects' > 
+        <div className='viewProjects' >
             <TitleWrapper >
                 <Title >
                     My projects 💻
                 </Title>
             </TitleWrapper>
             <BodyWrapper >
+                {
+                    projectlist.length > 0 &&
+                    <CardGroup >
+                        {
+                            projectlist.map(renderCard)
+                        }
 
-                        <CardGroup >
-                            {
-                                ProjectDetails.map(renderCard)
-                            }
-                            
-                            </CardGroup>
+                    </CardGroup>
+                }
+
 
             </BodyWrapper>
         </div>

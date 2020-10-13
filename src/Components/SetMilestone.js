@@ -2,7 +2,15 @@ import React from 'react';
 import './SetMilestone.css';
 import { Dropdown, Button } from 'react-bootstrap';
 
+
+
 const setmilestones = () => {
+    const milestonelist = [
+        "Acadivity",
+        "Practice DSA",
+        "JAVA",
+        "Guitar"
+    ]
     var projectname = "Select Project";
     return(
         <div className="main-content-setmilestone">
@@ -13,10 +21,11 @@ const setmilestones = () => {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1" >Acadivity</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Practice DSA</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">JAVA Assignment</Dropdown.Item>
-                        <Dropdown.Item href="#/action-4">Guitar Practice</Dropdown.Item>
+                        {
+                            milestonelist.map((item, index) => {
+                                return <Dropdown.Item key={index}>{item}</Dropdown.Item>;
+                            })
+                        }
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
@@ -28,10 +37,6 @@ const setmilestones = () => {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1" >Complete 5 min form video 1</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Complete 5 min form video 2</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Complete 5 min form video 3</Dropdown.Item>
-                        <Dropdown.Item href="#/action-4">Complete final Ex</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
