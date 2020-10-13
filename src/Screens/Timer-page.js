@@ -50,15 +50,16 @@ function Timerpage() {
     return (
         <div className='statistics'> 
             <TitleWrapper>
-                <Title>
-                    Timer
+                <Title style={{fontSize:"28px"}}>
+                    Timer ⏲️
                 </Title>
             </TitleWrapper>
             <BodyWrapper>
 
                             <div className='page_heading'>
+                            
                                 <Card body>
-                                    <Timer/>
+                                     <Timer/>
                                 </Card>
                             </div>
  

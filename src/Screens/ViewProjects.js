@@ -13,9 +13,9 @@ import CardGroup from 'react-bootstrap/CardGroup'
 
 const TitleWrapper = styled.section`
   position: absolute;
-    width: 965px;
+    width: 1200px;
     height: 86px;
-    left: 435px;
+    left: 140px;
     top: 99px;
 
     background: #FFFFFF;
@@ -26,12 +26,12 @@ const Title = styled.h1`
     position: absolute;
     width: 400px;
     height: 42px;
-    left: 241px;
+    left: 370px;
     top: 121px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
+    font-size: 48px;
     line-height: 42px;
     text-align: center;
     color: #9D9FA9;
@@ -40,8 +40,8 @@ const Title = styled.h1`
 
 const BodyWrapper = styled.section`
     position: absolute;
-    width: 1500px;
-    height: 580px;
+    width: 1200px;
+    height: 1140px;
     left: 100px;
     top: 217px;
     background: #FFFFFF;
@@ -56,18 +56,23 @@ function ViewProject() {
     const ProjectDetails = [
         {
             project_name:"Acadivity",
-            description: "A MERN App with something special!",
-            milestone: ["Complete the Frontend", "Complete the Backend","Complete the DevOps"]
+            description: "A special MERN App!",
+            milestone: ["Complete the Frontend", "Complete the Backend","Complete the DevOps","",""]
         },
         {
             project_name:"Practice DSA",
             description: "Just a Hobby!",
-            milestone: ["HashMap", "Dynamic Programming","Graphs"]
+            milestone: ["HashMap", "Dynamic Programming","Graphs","",""]
         },
         {
             project_name:"JAVA Assignment",
             description: "Course Work",
-            milestone: ["Complete Ex-1", "Complete Ex-1","Complete Ex-2","Complete Ex-3", "Complete Ex-4","Complete Ex-5"]
+            milestone: ["Complete Ex-1", "Complete Ex-1","Complete Ex-2","Complete Ex-3"]
+        },
+        {
+            project_name:"JAVA Assignment",
+            description: "Course Work",
+            milestone: ["Complete Ex-1", "Complete Ex-1","Complete Ex-2","Complete Ex-3"]
         },
         // {
         //     project_name:"Guitar Practice",
@@ -84,21 +89,21 @@ function ViewProject() {
 
         return(
             <div className="main-content-viewproject">
-                <Card  key={index}>
-                    <Card.Body>
-                        <Card.Header>{card.project_name}</Card.Header>
-                        <Card.Text>
-                        {card.description}
+                <Card  key={index} style={{width:"470px", height:"500px"}}>
+                    <Card.Body >
+                        <Card.Header><h3>{card.project_name}</h3></Card.Header>
+                        <Card.Text style={{margin:"20px"}}>
+                        <h5>Description: {card.description} 🗒️</h5>
                         </Card.Text>
-                        <Card.Subtitle>
-                            Milestones
+                        <Card.Subtitle style={{margin:"20px"}}>
+                            <h4>Milestones 🎯</h4>
                         </Card.Subtitle>
-                        <ListGroup variant="flush">
+                        <ListGroup variant="flush" style={{margin:"20px"}}>
                         {milestone_array.map(listitem => (
                             <ListGroup.Item>{listitem}</ListGroup.Item>))
                         }
                         </ListGroup>
-                        <Link to='/timer'><Button variant="primary">Start a session</Button></Link>
+                        <Link to='/timer'><Button variant="primary" style={{marginLeft:"20px"}}>Start a session</Button></Link>
                     </Card.Body>
                 </Card>
             </div>
@@ -108,18 +113,19 @@ function ViewProject() {
     
 
     return (
-        <div className='viewProjects'> 
-            <TitleWrapper>
-                <Title>
-                    View projects
+        <div className='viewProjects' > 
+            <TitleWrapper >
+                <Title >
+                    My projects 💻
                 </Title>
             </TitleWrapper>
-            <BodyWrapper>
+            <BodyWrapper >
 
-                        <CardGroup>
+                        <CardGroup >
                             {
                                 ProjectDetails.map(renderCard)
                             }
+                            
                             </CardGroup>
 
             </BodyWrapper>

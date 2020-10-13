@@ -7,6 +7,7 @@ export default function Timer() {
     return(
         <div>
             <StopWatch />
+            <br/>
             <SetMilestone />
         </div>
     );

@@ -20,6 +20,7 @@ const setmilestones = () => {
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
+            &nbsp;
             <div>
                 <Dropdown>
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -34,6 +35,7 @@ const setmilestones = () => {
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
+            <br/>
             <div>
                 <Button variant="outline-primary" href="/statistics">Submit Time!</Button>{' '}
             </div>

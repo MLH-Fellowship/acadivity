@@ -97,22 +97,22 @@ function NewProject() {
         <div className='newProject'> 
             {/* <Navbar/> */}
             <TitleWrapper>
-                <Title>
-                    Add a project
+                <Title style={{fontSize:"28px"}}>
+                Add a project 📝
                 </Title>
             </TitleWrapper>
             <BodyWrapper>
                         {/* <Card> */}
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group controlId="projectNamee">
-                                    <Form.Label>Project Name</Form.Label>
+                                    <Form.Label>Project Name ✏️</Form.Label>
                                     <Form.Control type="text" onChange={event => {setProjectName(event.target.value)}}/>
                                 </Form.Group>
                                 <Form.Group controlId="projectDes.ControlTextarea1">
-                                <Form.Label>Project Description</Form.Label>
+                                <Form.Label>Project Description 🗒️</Form.Label>
                                 <Form.Control as="textarea" rows={3} onChange={event => setDesc(event.target.value)}/>
                                 </Form.Group>
-                                <Form.Label>Enter Milestones</Form.Label>
+                                <Form.Label>Enter Milestones 🎯</Form.Label>
                                 {inputFields.map((inputFields,index) =>
                                 (
                                     <div key={index}>

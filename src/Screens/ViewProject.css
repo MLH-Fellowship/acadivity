@@ -1,8 +1,11 @@
 .main-content-viewproject {
-    /* width: 100%; */
-    
+    /* width: 100%;  */
+    align-content: left;
+    margin:20px;
 }
 
 .viewProjects {
     width: 100%;
+    
+    
 }
