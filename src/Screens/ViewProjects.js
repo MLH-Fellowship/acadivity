@@ -12,6 +12,7 @@ import styled from 'styled-components';
 import CardGroup from 'react-bootstrap/CardGroup';
 import axios from 'axios';
 import { useEffect } from 'react';
+import Cookies from 'js-cookie';
 
 const TitleWrapper = styled.section`
   position: absolute;
@@ -74,39 +75,16 @@ function ViewProject() {
     }, []);
 
 
-    const ProjectDetails = [
-        {
-            project_name: "Acadivity",
-            description: "A special MERN App!",
-            milestone: ["Complete the Frontend", "Complete the Backend", "Complete the DevOps", "", ""]
-        },
-        {
-            project_name: "Practice DSA",
-            description: "Just a Hobby!",
-            milestone: ["HashMap", "Dynamic Programming", "Graphs", "", ""]
-        },
-        {
-            project_name: "JAVA Assignment",
-            description: "Course Work",
-            milestone: ["Complete Ex-1", "Complete Ex-1", "Complete Ex-2", "Complete Ex-3"]
-        },
-        {
-            project_name: "JAVA Assignment",
-            description: "Course Work",
-            milestone: ["Complete Ex-1", "Complete Ex-1", "Complete Ex-2", "Complete Ex-3"]
-        },
-        // {
-        //     project_name:"Guitar Practice",
-        //     description: "Wild Hobby!",
-        //     milestone: ["Complete 5 min form video 1", "Complete 5 min form video 2","Complete 5 min form video 3","Complete final Ex"]
-        // }
-
-    ]
-
-
     const renderCard = (card, index) => {
 
         const milestone_array = card.milestones;
+        var no_milestone_array = [];
+        
+        milestone_array.map(function(listitem, index){
+            if (listitem.status === "false") {
+                no_milestone_array.push(listitem.title);
+            }
+        })
 
         return (
             <div className="main-content-viewproject">
@@ -120,9 +98,11 @@ function ViewProject() {
                             <h4>Yet to achieve milestones: 🎯</h4>
                         </Card.Subtitle>
                         <ListGroup variant="flush" style={{ margin: "20px" }}>
-                            {milestone_array.map(listitem => (
-                                listitem.status === "false" &&
-                                <ListGroup.Item>{listitem.title}</ListGroup.Item>))
+                            {
+                                milestone_array.map(listitem => (
+                                    listitem.status === "false" &&
+                                    <ListGroup.Item>{listitem.title}</ListGroup.Item>
+                                ))
                             }
                         </ListGroup>
                         <Card.Subtitle style={{ margin: "20px" }}>
@@ -134,7 +114,15 @@ function ViewProject() {
                                 <ListGroup.Item>{listitem.title}</ListGroup.Item>))
                             }
                         </ListGroup>
-                        <Link to='/timer'><Button variant="primary" style={{ marginLeft: "20px" }}>Start a session</Button></Link>
+                        <Link to='/timer'>
+                            <Button variant="primary" style={{ marginLeft: "20px" }} onClick={() => {
+                                Cookies.set('projectname', card.project_name);
+                                Cookies.set('nomilestonear', no_milestone_array);
+                                Cookies.set('projectid', card._id);
+                            }}>
+                                Start a session
+                            </Button>
+                        </Link>
                     </Card.Body>
                 </Card>
             </div>

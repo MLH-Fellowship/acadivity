@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import DisplayComponent from '../Components/StopWatch Component/DisplayComponent';
 import BtnComponent from '../Components/StopWatch Component/BtnComponent';
+import Cookies from 'js-cookie';
 
 
 function StopWatch() {
@@ -11,6 +12,13 @@ function StopWatch() {
         run();
         setStatus(1);
         setInterv(setInterval(run, 10));
+        const now = new Date();
+        const shour = now.getHours();
+        const smin = now.getMinutes();
+        const ssec = now.getSeconds();
+        Cookies.set('starthr', shour);
+        Cookies.set('startmin', smin);
+        Cookies.set('startsec', ssec);
     };
 
     var updatedMs = time.ms, updatedS = time.s, updatedM = time.m, updatedH = time.h;
@@ -35,6 +43,16 @@ function StopWatch() {
     const stop = () => {
         clearInterval(interv);
         setStatus(2);
+        const now = new Date();
+        const ehour = now.getHours();
+        const emin = now.getMinutes();
+        const esec = now.getSeconds();
+        Cookies.set('endhr', ehour);
+        Cookies.set('endmin', emin);
+        Cookies.set('endsec', esec);
+        console.log((Cookies.get('endhr') - Cookies.get('starthr'))*3600 + 
+                    (Cookies.get('endmin') - Cookies.get('startmin'))*60 +  
+                     Cookies.get('endsec') - Cookies.get('startsec'));
     };
 
     const reset = () => {
@@ -50,6 +68,7 @@ function StopWatch() {
         <div className="main-section">
          <div className="clock-holder">
               <div className="stopwatch">
+                  
                    <DisplayComponent time={time}/>
                    <BtnComponent status={status} resume={resume} reset={reset} stop={stop} start={start}/>
               </div>
