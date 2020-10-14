@@ -16,6 +16,22 @@ import Cookies from 'js-cookie';
 // import Alert from '../Components/Alert';
 import GoogleLogin from 'react-google-login';
 // import Navbar from '../Components/Navbar/Navbar';
+import styled from 'styled-components';
+const Title = styled.h1`
+    position: absolute;
+    width: 213px;
+    height: 42px;
+    left: 700px;
+    top: 184px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 42px;
+    text-align: center;
+    color: black;
+
+`;
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -93,9 +109,10 @@ export default function SignIn () {
 						<Avatar className={classes.avatar}>
 							<PersonIcon />
 						</Avatar>
-						<Typography component='h1' variant='h5' style={{ marginBottom: '25px' }}>
+						{/* <Typography component='h1' variant='h5' style={{ marginBottom: '25px' }}>
 							Sign In
-						</Typography>
+						</Typography> */}
+						<Title>Sign in</Title>
 						<h6 className='signin-divider'>
 						</h6>
 						<form className={classes.form} onSubmit={submitHandler}>
