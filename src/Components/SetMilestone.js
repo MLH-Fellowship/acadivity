@@ -9,7 +9,7 @@ const setmilestones = () => {
     console.log(Cookies.get('nomilestonear'));
     const temp = Cookies.get('nomilestonear');
     const milestonelist = JSON.parse(temp);
-    const projectname = "Select Project";
+    const projectname = "Select Milestones";
 
     const updateprojectstatus = async () => {
         // code to update status should be added here

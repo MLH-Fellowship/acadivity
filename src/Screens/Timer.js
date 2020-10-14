@@ -15,7 +15,7 @@ export default function Timer() {
             <br/>
             <SetMilestone />
         </div>
-        </>
+        
     );
 };
 
