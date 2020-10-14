@@ -54,7 +54,7 @@
 ```
 * Start the developement server:
 ```bash
-> npm start
+> cd server/ && npm start
 ```
 ### Note:
 
