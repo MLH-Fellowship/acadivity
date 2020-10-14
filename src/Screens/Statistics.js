@@ -46,21 +46,39 @@ const BodyWrapper = styled.section`
     margin-left: 35px;
     
 `;
+const Des = styled.h1`
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: left;
+    color: #9D9FA9;
+    position: absolute;
+    width: 965px;
+    height: 480px;
+    left: 150px;
+    top: 267px;
+    
+`;
 
 function Statistics() {
     return (<>
     <NavigationBar />
         <Sidebar />
         <div className='statistics'> 
-            {/* <h1 className="statics-head">So, What's the Stat ?</h1>
-            <Piechart />
+            {/* <h1 className="statics-head">So, What's the Stat ?</h1> */}
+            {/* <Piechart />
             <Progessbar /> */}
             <TitleWrapper>
                 <Title>
-                    Statistics
+                    Statistics📅
                 </Title>
             </TitleWrapper>
             <BodyWrapper>
+            <Des>
+            The following piechart shows <br/>amount of time spent on each <br/>project(seconds). 
+            </Des>
             <Piechart />
             {/* <Progessbar /> */}
             </BodyWrapper>
