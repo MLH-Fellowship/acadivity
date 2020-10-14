@@ -9,7 +9,7 @@
 
 ## Introduction :label:
 #### Is college just about academics? :book: <br> Or is it about co-curricular activities only? ⚽<br> What if we had a tool that could help us find the balance between both? <br>
-# PICTURE : LANDING PAGE
+![Landing page](/Images/landing-page--s-1.jpg)
 
 
 
@@ -21,7 +21,9 @@
    - Stay motivated through post work retrospection.
    - Take breaks with our entertainment suggestions
 
-# PICTURES OF ADD PROJECT AND VIEW PROJECT
+![Landing page](/Images/add-proj-ss.jpg)
+![Landing page](/Images/view-projects-ss.jpg)
+
 
  * <strong>Grade  Aid</strong> : Set your target and achieve it through continuous effort. :chart_with_upwards_trend:
    - Provide a target CGPA in X semesters.
@@ -31,7 +33,7 @@
 # PICTURE OF GRADE 
 
 ## Workflow
-# PICTURE OF WORKFLOW
+![Landing page](/Images/workflow-readme.png)
 
 ## Installation
 
