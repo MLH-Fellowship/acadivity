@@ -18,7 +18,7 @@ function Cards() {
         </Card.Body>
       </Card>
       <Card>
-        <Card.Img variant="top" src="images/02.jpg" />
+        <Card.Img variant="top" src="images/03.jpg" />
         <Card.Body>
           <Card.Title>Project Manager</Card.Title>
           <Card.Text>
@@ -30,7 +30,7 @@ function Cards() {
           </Card.Text>
         </Card.Body>
       </Card>
-      <Card>
+      {/* <Card>
         <Card.Img variant="top" src="images/03.jpg" />
         <Card.Body>
           <Card.Title>Attendance Guide</Card.Title>
@@ -39,7 +39,7 @@ function Cards() {
             Get a plan on managing attendance to maintain the target percentage
           </Card.Text>
         </Card.Body>
-      </Card>
+      </Card> */}
   </CardDeck>
   )
 }

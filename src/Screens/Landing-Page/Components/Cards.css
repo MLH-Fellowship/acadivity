@@ -8,3 +8,8 @@
 .card-text{
     text-align: center;
 }
+
+.card-img{
+    height: 400px;
+    width: 400px;
+}
