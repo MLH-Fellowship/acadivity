@@ -12,7 +12,7 @@ const TitleWrapper = styled.section`
   position: absolute;
     width:760px;
     height: 86px; 
-    left: 435px;
+    left: 159px;
     top: 99px;
 
     background: #FFFFFF;
@@ -38,12 +38,30 @@ const Title = styled.h1`
 const BodyWrapper = styled.section`
     position: absolute;
     width: 760px;
-    height: 580px;
-    left: 436px;
+    height: 480px;
+    left: 159px;
     top: 210px;
     background: #FFFFFF;
     box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.25);
     padding: 4em;
+    
+`;
+
+const ImgWrapper = styled.section`
+    background: #FFFFFF;
+    box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.25);
+    padding: 4em;
+    position: absolute;
+    width: 560px;
+    height: 590px;
+    left: 1010px;
+    top: 99px;
+    background-image: url("images/grade-m.jpg");
+    background: ##FFFFFF;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    /*background-size: cover;  Resize the background image to cover the entire container */
+    padding: 10px;
     
 `;
 
@@ -118,6 +136,7 @@ function Grade() {
                             </Modal>
                             
             </BodyWrapper>
+            <ImgWrapper></ImgWrapper>
         </div>
     )
 }
