@@ -30,7 +30,7 @@
    - Get a detailed report on the minimum requirement per semester to reach the target.
    - Update CGPA after each semester to get a revised plan of action.
 
-# PICTURE OF GRADE 
+
 
 ## Workflow
 ![Landing page](/Images/workflow-readme.png)
@@ -54,7 +54,7 @@
 ```
 * Start the developement server:
 ```bash
-> cd server/ && npm start
+> cd server/ && npm install && npm start
 ```
 ### Note:
 
