@@ -41,7 +41,7 @@
 
 * Clone the git repository:
 ```bash
-> git clone git@github.com:MLH-Fellowship/SIMPLERx.git
+> git clone https://github.com/MLH-Fellowship/acadivity.git
 ```
 * Move into the local repository:
 ```bash
