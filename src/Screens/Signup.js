@@ -16,6 +16,23 @@ import { Redirect } from 'react-router-dom';
 // import Navbar from '../Components/Navbar/Navbar';
 // import Alert from '../Components/Alert';
 // import Cookies from 'js-cookie';
+import styled from 'styled-components';
+const Title = styled.h1`
+    position: absolute;
+    width: 213px;
+    height: 42px;
+    left: 700px;
+    top: 188px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 42px;
+    text-align: center;
+    color: black;
+
+`;
+
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -54,23 +71,23 @@ export default function SignUp () {
 		console.log(first_name + ' ' + last_name);
 		console.log(email);
 		console.log(password);
-		if (password === confirmPassword) {
-            axios
-                .post('https://acadivity.herokuapp.com/api/register', {
-					name: first_name + ' ' + last_name,
-					email: email,
-					password: confirmPassword
-				})
-				.then(
-					(response) => {
-						if (response.data == "registered") {
-							setSignupsuccess(true);
-						}
-					}
-				);
-		} else {
-			setErrMsg('Password Mismatch');
-		}
+		// if (password === confirmPassword) {
+        //     axios
+        //         .post('https://acadivity.herokuapp.com/api/register', {
+		// 			name: first_name + ' ' + last_name,
+		// 			email: email,
+		// 			password: confirmPassword
+		// 		})
+		// 		.then(
+		// 			(response) => {
+		// 				if (response.data == "registered") {
+		// 					setSignupsuccess(true);
+		// 				}
+		// 			}
+		// 		);
+		// } else {
+		// 	setErrMsg('Password Mismatch');
+		// }
 	};
 		return (
 			<div>
@@ -83,9 +100,10 @@ export default function SignUp () {
 							<Avatar className={classes.avatar}>
 								<PersonAddIcon />
 							</Avatar>
-							<Typography component='h1' variant='h5' style={{ marginBottom: '25px' }}>
+							{/* <Typography component='h1' variant='h5' style={{ marginBottom: '25px', color:'textPrimary'}}>
 								Sign Up
-							</Typography>
+							</Typography> */}
+							<Title>Sign up</Title>
 							<form className={classes.form} onSubmit={submitHandler} noValidate={true}>
 								<Grid container spacing={2}>
 									<Grid item xs={12} sm={6}>
@@ -155,15 +173,15 @@ export default function SignUp () {
 										/>
 									</Grid>
 								</Grid>
-								<Button
-									type='submit'
+								<Link to='/signin'><Button
+									value='submit'
 									fullWidth
 									variant='contained'
 									color='primary'
 									className={classes.submit}
 								>
 									Sign Up
-								</Button>
+								</Button></Link>
 								<Grid container justify='flex-end'>
 									<Grid item>
 										<Link href='/signin' variant='body2'>

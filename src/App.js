@@ -14,6 +14,8 @@ import LandingPage from './Screens/Landing-Page/Page/Home'
 import Timerpage from './Screens/Timer-page';
 import { NavigationBar } from './Components/Navbar/NavigationBar';
 import Sidebar from './Components/Navbar/Sidebar';
+import childApp from './childApp'
+import Grade from './Screens/Grade'
 
 // function App() {
 //   return (
@@ -47,16 +49,19 @@ import Sidebar from './Components/Navbar/Sidebar';
 function App() {
   return (
     <React.Fragment>
-      <Router>
-        <NavigationBar />
-        <Sidebar />
-        <Switch>
-          <Route exact path="/statistics" component={Statistics} />
-          <Route exact path="/ViewProjects" component={ViewProject} />
-          <Route exact path="/newProject" component={NewProject} />
-          <Route exact path="/timer" component={Timerpage} />
-        </Switch>
-      </Router>
+    <Router>
+      <Switch>
+      <Route path='/' exact component={LandingPage}/>
+      {/* <Route path='/dashboard' component={childApp}/> */}
+      <Route exact path="/ViewProjects" component={ViewProject}/>
+      <Route exact path="/signup" component={Signup} />
+      <Route exact path="/signin" component={Signin} />
+      <Route exact path="/statistics" component={Statistics} />
+      <Route exact path="/newProject" component={NewProject} />
+      <Route exact path="/timer" component={Timerpage} />
+      <Route exact path="/grade" component={Grade} />
+      </Switch>
+    </Router>
     </React.Fragment>
   );
 }

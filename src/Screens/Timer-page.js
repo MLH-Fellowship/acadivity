@@ -6,12 +6,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card'
 import styled from 'styled-components';
+import { NavigationBar } from '../Components/Navbar/NavigationBar';
+import Sidebar from '../Components/Navbar/Sidebar';
 
 const TitleWrapper = styled.section`
   position: absolute;
     width:760px;
     height: 86px;
-    left: 435px;
+    left: 159px;
     top: 99px;
 
     background: #FFFFFF;
@@ -38,7 +40,7 @@ const BodyWrapper = styled.section`
     position: absolute;
     width: 760px;
     height: 580px;
-    left: 436px;
+    left: 159px;
     top: 210px;
     background: #FFFFFF;
     box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.25);
@@ -46,8 +48,28 @@ const BodyWrapper = styled.section`
     
 `;
 
+const ImgWrapper = styled.section`
+    background: #FFFFFF;
+    box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.25);
+    padding: 4em;
+    position: absolute;
+    width: 560px;
+    height: 690px;
+    left: 1010px;
+    top: 99px;
+    background-image: url("images/timer.jpg");
+    background: ##FFFFFF;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    /*background-size: cover;  Resize the background image to cover the entire container */
+    padding: 10px;
+    
+`;
+
 function Timerpage() {
-    return (
+    return (<>
+        <NavigationBar />
+        <Sidebar />
         <div className='statistics'> 
             <TitleWrapper>
                 <Title style={{fontSize:"28px"}}>
@@ -64,7 +86,9 @@ function Timerpage() {
                             </div>
  
             </BodyWrapper>
+            <ImgWrapper></ImgWrapper>
         </div>
+        </>
     )
 }
 

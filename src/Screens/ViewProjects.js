@@ -9,18 +9,19 @@ import Button from 'react-bootstrap/Button';
 import CardDeck from 'react-bootstrap/CardDeck';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
-import CardGroup from 'react-bootstrap/CardGroup';
+import CardGroup from 'react-bootstrap/CardGroup'
+import { NavigationBar } from '../Components/Navbar/NavigationBar';
+import Sidebar from '../Components/Navbar/Sidebar';
 import axios from 'axios';
 import { useEffect } from 'react';
 import Cookies from 'js-cookie';
 
 const TitleWrapper = styled.section`
   position: absolute;
-    width: 1200px;
+    width: 1100px;
     height: 86px;
     left: 140px;
     top: 99px;
-
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
@@ -43,14 +44,32 @@ const Title = styled.h1`
 
 const BodyWrapper = styled.section`
     position: absolute;
-    width: 1200px;
+    width: 1100px;
     height: 1140px;
     left: 100px;
     top: 217px;
     background: #FFFFFF;
     box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.25);
-    padding: 4em;
+    padding: 2em;
     margin-left: 43px;
+    
+`;
+
+const ImgWrapper = styled.section`
+    background: #FFFFFF;
+    box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.25);
+    padding: 4em;
+    position: absolute;
+    width: 270px;
+    height: 650px;
+    left: 1300px;
+    top: 99px;
+    background-image: url("images/view-proj.jpg");
+    background: ##FFFFFF;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    /*background-size: cover;  Resize the background image to cover the entire container */
+    padding: 10px;
     
 `;
 
@@ -130,9 +149,10 @@ function ViewProject() {
     }
 
 
-
-    return (
-        <div className='viewProjects' >
+    return (<>
+        <NavigationBar />
+        <Sidebar />
+        <div className='viewProjects' > 
             <TitleWrapper >
                 <Title >
                     My projects 💻
@@ -151,7 +171,9 @@ function ViewProject() {
 
 
             </BodyWrapper>
+            <ImgWrapper></ImgWrapper>
         </div>
+        </>
     )
 }
 

@@ -43,9 +43,15 @@ class SideNav extends React.Component {
                 },
                 {
                     path: '/timer',
-                    name: 'Playgroud',
+                    name: 'Timer',
                     css: 'fas fa-clock',
                     key: 4
+                },
+                {
+                    path: '/grade',
+                    name: 'Grade',
+                    css: 'fas fa-graduation-cap',
+                    key: 5
                 },
               ]
         }
