@@ -12,11 +12,10 @@ import Sidebar from '../Components/Navbar/Sidebar';
 
 const TitleWrapper = styled.section`
   position: absolute;
-    width: 763px;
+    width: 783px;
     height: 86px;
-    left: 435px;
+    left: 159px;
     top: 99px;
-
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
@@ -39,13 +38,31 @@ const Title = styled.h1`
 
 const BodyWrapper = styled.section`
     position: absolute;
-    width: 760px;
+    width: 783px;
     height: 580px;
-    left: 436px;
+    left: 159px;
     top: 210px;
     background: #FFFFFF;
     box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.25);
     padding: 4em;
+    
+`;
+
+const ImgWrapper = styled.section`
+    background: #FFFFFF;
+    box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.25);
+    padding: 4em;
+    position: absolute;
+    width: 500px;
+    height: 685px;
+    left: 1030px;
+    top: 99px;
+    background-image: url("images/new-proj.jpg");
+    background: ##FFFFFF;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    /*background-size: cover;  Resize the background image to cover the entire container */
+    padding: 10px;
     
 `;
 
@@ -143,6 +160,7 @@ function NewProject() {
                         {/* </Card> */}
 
             </BodyWrapper>
+            <ImgWrapper></ImgWrapper>
         </div>
         </>
     )
