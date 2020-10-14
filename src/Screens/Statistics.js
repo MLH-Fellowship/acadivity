@@ -36,14 +36,14 @@ const Title = styled.h1`
 
 const BodyWrapper = styled.section`
     position: absolute;
-    width: 1500px;
-    height: 580px;
-    left: 100px;
+    width: 965px;
+    height: 480px;
+    left: 400px;
     top: 217px;
     background: #FFFFFF;
     box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.25);
-    padding: 4em;
-    margin-left: 43px;
+    padding-left: -5rem;
+    margin-left: 35px;
     
 `;
 
@@ -62,7 +62,7 @@ function Statistics() {
             </TitleWrapper>
             <BodyWrapper>
             <Piechart />
-            <Progessbar />
+            {/* <Progessbar /> */}
             </BodyWrapper>
         </div>
         </>

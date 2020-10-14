@@ -25,7 +25,7 @@ const PieChartComp = () => {
     function formProjectSessionMap(data) {
         console.log(data);
         var projsess = new Array();
-        var color = ["yellow", "red", "green", "blue", "purple", "violet"];
+        var color = ["blue", "red", "green", "yellow", "purple", "violet"];
         // console.log(data.length);
         for (var i = 0; i<data.length; i++) {
             console.log(data[i].session);
