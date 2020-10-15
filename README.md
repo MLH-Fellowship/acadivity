@@ -58,8 +58,8 @@
 ```
 ### Note:
 
-* Add a ```bash .env``` file with ```bash MONGODB_URL= <your_mongodb_link>``` and ```bash SESSION_SECRET = secret``` to run the back-end server on your own database. 
-* Front-end React server listens to ```bash PORT:3000``` and back-end server listens to ```bash PORT:5000```
+* Add a `.env` file with `MONGODB_URL= <your_mongodb_link>` and ` SESSION_SECRET = secret` to run the back-end server on your own database. 
+* Front-end React server listens to `PORT:3000` and back-end server listens to `PORT:5000`
 
 ### Happy Hacking!
 
